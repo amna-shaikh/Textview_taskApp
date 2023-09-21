@@ -1,0 +1,11 @@
+To access the flavor-specific configurations in your Dart code,
+you can use the const String.fromEnvironment constructor to retrieve the values you defined in the build.yaml file.
+
+For example:
+//This is a command how we use different flavors in our app
+const String apiEndpoint = const String.fromEnvironment('API_ENDPOINT');
+const String appName = const String.fromEnvironment('APP_NAME');
+
+
+This ia command to build the app with your desired flavor. It will generate for you an APK.
+flutter build flavorname

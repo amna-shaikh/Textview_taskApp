@@ -1,0 +1,28 @@
+targets:
+  $default:
+    sources:
+      - lib/**
+  staging:
+    extends: common
+    define:
+      - APP_ENV=staging
+      - API_ENDPOINT=https://jsonplaceholder.typicode.com/todos
+      - APP_ICON=assets/app_icon_stage.jpg
+      - APP_NAME=TaskApp (Staging)
+  qa: 
+    extends: common
+    define:
+      - APP_ENV=qa
+      - API_ENDPOINT=https://jsonplaceholder.typicode.com/todos
+      - APP_ICON=assets/app_icon_qa.jpg
+      - APP_NAME=TaskApp (QA)
+  production:
+    extends: common
+    define:
+      - APP_ENV=production
+      - API_ENDPOINT=https://jsonplaceholder.typicode.com/todos
+      - APP_ICON=assets/app_icon_p.jpg
+      - APP_NAME=TaskApp
+  common:
+    define:
+      - FOO=bar
